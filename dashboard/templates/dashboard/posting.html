@@ -1,0 +1,50 @@
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<style>
+    body {
+        margin-top: 50px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<br>
+
+
+<div class="row justify-content-center">
+<div class="col-md-12">
+<div class="card">
+<header class="card-header">
+	<h4 class="card-title mt-2">Posting</h4>
+</header>
+<article class="card-body">
+
+{% load widget_tweaks %}
+<form method="post" class="needs-validation {% if form.errors %}was-validated{% endif %}" novalidate>
+    {% csrf_token %}
+	<div class="form-row">
+		<div class="col form-group">
+              {{ form }}
+	
+        <button type="submit" class="btn btn-primary btn-block"> Posting  </button>
+
+    </div> <!-- form-group// -->                                             
+</form>
+</article> <!-- card-body end .// -->
+</div> <!-- card.// -->
+</div> <!-- col.//-->
+
+</div> <!-- row.//-->
+
+
+</div> 
+<!--container end.//-->
+</body>
+</html>

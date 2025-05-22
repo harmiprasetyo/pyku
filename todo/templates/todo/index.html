@@ -38,6 +38,12 @@
         <!-- tombol untuk ke halaman tambah task -->
         <div>
           <a href="{% url 'todo:create'  %}" class="btn btn-success">Tambah Baru</a>
+         
+
+          <form action="{% url 'logout' %}" method="post">
+    {% csrf_token %} 
+    <button type="submit"  class="float-right btn btn-outline-primary mt-1">Logout</button>
+</form>
         </div>
 
       <br>

@@ -19,7 +19,12 @@ from django.urls import path
 from django.urls.conf import include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+   # path('admin/', admin.site.urls),
         # add route from todo Application
-    path('todo/', include('todo.urls'))
+    path('todo/', include('todo.urls')),
+     path('', include('myauth.urls')),
+     #path('posting/', include('posting.urls')),
+     path('dashboard/',include('dashboard.urls')),
+     path('mapping/',include('mapping.urls'))
+    # path('', include('login.urls', namespace='login')),
 ]
